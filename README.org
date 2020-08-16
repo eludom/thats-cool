@@ -1,0 +1,38 @@
+* Emacs - things that make me say "Oh, that's cool !!!"
+  There are reasons I'm still using Emacs after 40 years.   After all
+  that time, I still discover things on a daily basis that make me
+  exclaim "Oh, that's cool".  It's useful.  If's fun.  It is an end as
+  well as a means.
+** Github renders .org files as well as markdown
+   Github has buil-in rendering for basic org mode text.  Like this file.
+** Creating a temporary buffer in emacs                                :NOTE:
+   [2020-08-14 Fri 07:13]
+   In Xah fly mode "SPC i l" calls xah-new-empty-buffer.  coo.
+** Org-capture for notes/journals/tweets...                            :NOTE:
+ [2020-08-14 Fri 07:25]
+ [[file:~/.emacs.d/george.org::*Capture Templates][Capture Templates]]
+ So, org-capture "note" template allows me to capture
+ notes/journals/tweets. My config has:
+
+ #+begin_example
+   (setq org-capture-templates
+      (quote (...
+              ("n" "note" entry (file "~/Org/refile.org")
+               "* %? :NOTE:\n%U\n%a\n")
+ #+end_example
+ I commented out the old entry because I don't use clocking for time tracking
+** In Org mode, take a note when task is DONE                          :NOTE:
+   [2020-08-16 Sun 08:17]
+   In org mode, you can add notes to a TODO item when it transitions to
+   the DONE (or other) states.
+
+   Just define org-todo-keywords as follows (here being after the "|"
+   means it is a "done" (red) state, the "d" means to use "d" as the
+   shortcut key and "@") means to add a note with a timestamp.  "!"
+   means "add a timestamp".  "/" means allows separate actions for
+   transitions into the state (left of "/") and out of the state "/"
+
+   #+begin_example
+  (setq org-todo-keywords
+  '((sequence "TODO(t)" "IN-PROGRESS(i!)" "WAITING(w@/!)" "|" "DONE(d@)" "REFILED(r!)" "DELEGATED(g@)" "CANCELED(c@)" "OBE(o@)")))
+   #+end_example
