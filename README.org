@@ -36,3 +36,12 @@
   (setq org-todo-keywords
   '((sequence "TODO(t)" "IN-PROGRESS(i!)" "WAITING(w@/!)" "|" "DONE(d@)" "REFILED(r!)" "DELEGATED(g@)" "CANCELED(c@)" "OBE(o@)")))
    #+end_example
+** Helm abbrev stack                                                   :NOTE:
+ [2020-08-19 Wed 07:14]
+ I use helm for emacs command auotocompletion (M-x foo..).  I kept
+ typing "ms" to get my "magit-status" but instead kept getting
+ "gnus-ms-mail".  It turns out helm maintains an LRU stack of commands
+ used that match the substring typed (e.g. "ms").  You can use the
+ arrow keys to pick one that is not on top of the stack.  Then it will
+ be on top of the stack next time and you can just type, e.g. "ms".
+ Cool !
