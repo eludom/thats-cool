@@ -45,3 +45,9 @@
  arrow keys to pick one that is not on top of the stack.  Then it will
  be on top of the stack next time and you can just type, e.g. "ms".
  Cool !
+** RETURN opens URL under cursor in browser in org           :NOTE:org:emacs:
+   [2020-08-22 Sat 08:26]
+   Not sure if this is new behavior or not, but hitting RETURN on top
+   of a URL in an .org file now opens the URL in the default browser.
+   Of source, M-x eww still opens it in eww for the text-only view of
+   the world.....
